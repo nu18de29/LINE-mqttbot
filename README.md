@@ -34,8 +34,8 @@ heroku config:set FIXIE_URL_HOST=xxxxxxxxxxxx.usefixie.com FIXIE_URL_PORT=80 FIX
 heroku config:set MQTT_HOST=your.mqtt.broker MQTT_PORT=1883 MQTT_TOPIC=topic MQTT_QOS=0 MQTT_USERNAME=user MQTT_PASSWORD=pass --app your-line-bot
 ```
 
-### ボット友達になる
+### ボットと友達になる
 * LINE Bot API の QR コードを LINE アプリで読み取り友達になります
 
 ### 会話してみる
-![bot-sample-demo]https://lh3.googleusercontent.com/-eALbZHnc5R0/V4e1yf_4ApI/AAAAAAAAJCQ/XN8MBOz7GqsE4BKtBrm6O9qorPlikc01QCKgB/s0/bot_sample.png
+![bot-sample-demo](https://lh3.googleusercontent.com/-eALbZHnc5R0/V4e1yf_4ApI/AAAAAAAAJCQ/XN8MBOz7GqsE4BKtBrm6O9qorPlikc01QCKgB/s0/bot_sample.png)
