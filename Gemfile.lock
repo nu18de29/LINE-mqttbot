@@ -2,6 +2,7 @@ GEM
   remote: https://rubygems.org/
   specs:
     backports (3.6.8)
+    eventmachine (1.2.0.1)
     line-bot-api (0.1.6)
       rack (>= 1.6)
     mqtt (0.4.0)
@@ -28,6 +29,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  eventmachine
   line-bot-api
   mqtt (= 0.4.0)
   sinatra (= 1.4.7)

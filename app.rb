@@ -2,6 +2,7 @@
 require 'sinatra'
 require 'line/bot'
 require 'mqtt'
+require 'eventmachine'
 
 file = File.read('config/answer.json')
 settings = JSON.parse(file)
@@ -59,6 +60,31 @@ def sendMessage(payload)
     end
 end
 
+$latest = ""
+def receiveMessage()
+  host = ENV["MQTT_HOST"]
+  port = ENV["MQTT_PORT"]
+  topic = ENV["MQTT_TOPIC"]
+  username = ENV["MQTT_USERNAME"]
+  password = ENV["MQTT_PASSWORD"]
+  MQTT::Client.connect(
+    :host => host,
+    :port => port,
+    :username => username,
+    :password => password) do |c|
+      c.get(topic) do |topic, message|
+        $latest = message
+      end
+    end
+end
+EM::defer do
+  receiveMessage()
+end
+
+def getLatest()
+  return $latest
+end
+
 get '/' do
   erb :hello
 end
@@ -78,8 +104,10 @@ post '/callback' do
       msg = message.content[:text]
       puts msg
       puts msg.encoding
-      puts settings['success']
-      settings['success'].each { |successes|
+      puts settings['pub_success']
+      puts settings['sub_success']
+      # publish
+      settings['pub_success'].each { |successes|
         if (msg.chomp == successes['message'])
           sendMessage(successes['payload'])
           client.send_text(
@@ -89,6 +117,18 @@ post '/callback' do
           return "OK"
         end
       }
+      # subscribe
+      settings['sub_success'].each { |successes|
+        if (msg.chomp == successes['message'])
+          value = getLatest()
+          client.send_text(
+            to_mid: message.from_mid,
+            text: successes['responses'].sample.gsub("{value}", value),
+          )
+          return "OK"
+        end
+      }
+      # fail
       client.send_text(
         to_mid: message.from_mid,
         text: settings['fail'].sample,

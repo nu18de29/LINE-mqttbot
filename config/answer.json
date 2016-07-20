@@ -1,10 +1,19 @@
 {
-  "success": [
+  "pub_success": [
     {
       "message": "パブリッシュして",
       "payload": "hoge",
       "responses": [
         "パブリッシュしました"
+      ]
+    }
+  ],
+  "sub_success": [
+    {
+      "message": "サブスクライブして",
+      "responses": [
+        "サブスクライブしました {value}",
+        "最新の値は {value} です"
       ]
     }
   ],
