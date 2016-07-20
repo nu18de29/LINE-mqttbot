@@ -64,7 +64,7 @@ $latest = ""
 def receiveMessage()
   host = ENV["MQTT_HOST"]
   port = ENV["MQTT_PORT"]
-  topic = ENV["MQTT_TOPIC"]
+  sub_topic = ENV["MQTT_SUB_TOPIC"] || ENV["MQTT_TOPIC"]
   username = ENV["MQTT_USERNAME"]
   password = ENV["MQTT_PASSWORD"]
   MQTT::Client.connect(
@@ -72,7 +72,7 @@ def receiveMessage()
     :port => port,
     :username => username,
     :password => password) do |c|
-      c.get(topic) do |topic, message|
+      c.get(sub_topic) do |topic, message|
         $latest = message
       end
     end

@@ -31,7 +31,7 @@ heroku config:set FIXIE_URL_HOST=xxxxxxxxxxxx.usefixie.com FIXIE_URL_PORT=80 FIX
 * MQTT 設定
 
 ```
-heroku config:set MQTT_HOST=your.mqtt.broker MQTT_PORT=1883 MQTT_TOPIC=topic MQTT_QOS=0 MQTT_USERNAME=user MQTT_PASSWORD=pass --app your-line-bot
+heroku config:set MQTT_HOST=your.mqtt.broker MQTT_PORT=1883 MQTT_TOPIC=topic MQTT_SUB_TOPIC=sub_topic MQTT_QOS=0 MQTT_USERNAME=user MQTT_PASSWORD=pass --app your-line-bot
 ```
 
 ### ボットと友達になる
