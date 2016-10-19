@@ -3,8 +3,7 @@ GEM
   specs:
     backports (3.6.8)
     eventmachine (1.2.0.1)
-    line-bot-api (0.1.6)
-      rack (>= 1.6)
+    line-bot-api (1.0.0)
     mqtt (0.4.0)
     multi_json (1.12.1)
     rack (1.6.4)
@@ -30,7 +29,7 @@ PLATFORMS
 
 DEPENDENCIES
   eventmachine
-  line-bot-api
+  line-bot-api (>= 1.0.0)
   mqtt (= 0.4.0)
   sinatra (= 1.4.7)
   sinatra-contrib (= 1.4.7)

@@ -19,7 +19,7 @@ https://business.line.me/services/products/4/introduction
 * LINE 設定
 
 ```
-heroku config:set LINE_CHANNEL_ID=1234567890 LINE_CHANNEL_SECRET=your_line_channel_secret LINE_CHANNEL_MID=your_line_channel_mid --app your-line-bot
+heroku config:set LINE_CHANNEL_SECRET=your_line_channel_secret LINE_CHANNEL_TOKEN=your_line_channel_token --app your-line-bot
 ```
 
 * Fixie 設定
