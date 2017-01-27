@@ -1,24 +1,24 @@
 {
   "pub_success": [
     {
-      "message": "パブリッシュして",
-      "payload": "hoge",
+      "message": "Publish to",
+      "payload": "high",
       "responses": [
-        "パブリッシュしました"
+        "I was published"
       ]
     }
   ],
   "sub_success": [
     {
-      "message": "サブスクライブして",
+      "message": "subscribe to",
       "responses": [
-        "サブスクライブしました {value}",
-        "最新の値は {value} です"
+        "Sub was scribe Value {value}",
+        "Up-to-date values is {value}"
       ]
     }
   ],
   "fail": [
-    "メッセージが違います",
-    "めっせーじが違います"
+    "Messae is different",
+    "Message is different"
   ]
 }
