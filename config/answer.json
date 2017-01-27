@@ -2,7 +2,7 @@
   "pub_success": [
     {
       "message": "Publish to",
-      "payload": "high",
+      "payload": "0",
       "responses": [
         "I was published"
       ]
