@@ -19,13 +19,11 @@
     {
       "message": "ไฟเปิดอยู่ไหม",
       "responses": [
-        "Sub was scribe Value {value}",
-        "เลขหนึ่งคือไฟปิดอยู่ {value}"
+        "[1=ปิด] ,[0=เปิด] สถานะตอนนี้ {value}"
       ]
     }
   ],
   "fail": [
-    "Messae is different",
-    "Message is different"
+    "สวัสดีค่ะ ยินดีให้บริการ"
   ]
 }
