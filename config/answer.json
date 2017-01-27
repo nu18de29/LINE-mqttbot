@@ -1,19 +1,26 @@
 {
   "pub_success": [
     {
-      "message": "Publish to",
+      "message": "เปิดไฟ",
       "payload": "0",
       "responses": [
-        "I was published"
+        "เปิดไฟให้แล้วค่ะ"
       ]
-    }
+    },
+	{
+	  "message": "ปิดไฟ",
+      "payload": "1",
+      "responses": [
+        "ปิดไฟให้แล้วค่ะ"
+      ]
+	}
   ],
   "sub_success": [
     {
-      "message": "subscribe to",
+      "message": "ไฟเปิดอยู่ไหม",
       "responses": [
         "Sub was scribe Value {value}",
-        "Up-to-date values is {value}"
+        "เลขหนึ่งคือไฟปิดอยู่ {value}"
       ]
     }
   ],
