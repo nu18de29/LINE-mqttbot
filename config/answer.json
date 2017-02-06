@@ -18,7 +18,7 @@
   "sub_success": [
     {
       "message": "ไฟเปิดอยู่ไหม",
-      "topic": "light"
+      "topic": "/f14decf9-b20d-11e6-8d27-847beb0c5a27/light"
       "responses": [
         "[1=ปิด] ,[0=เปิด] สถานะตอนนี้ {value}"
       ]
