@@ -2,6 +2,7 @@
   "pub_success": [
     {
       "message": "เปิดไฟ",
+      "sub_topic": "/light",
       "payload": "0",
       "responses": [
         "เปิดไฟให้แล้วค่ะ"
