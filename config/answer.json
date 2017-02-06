@@ -2,7 +2,7 @@
   "pub_success": [
     {
       "message": "เปิดไฟ",
-      "sub_topic": "/light",
+      "sub_topic": "/f14decf9-b20d-11e6-8d27-847beb0c5a27/light",
       "payload": "0",
       "responses": [
         "เปิดไฟให้แล้วค่ะ"
@@ -19,14 +19,14 @@
   "sub_success": [
     {
       "message": "ไฟเปิดอยู่ไหม",
-      "sub_topic": "/light",
+      "sub_topic": "/f14decf9-b20d-11e6-8d27-847beb0c5a27/light",
       "responses": [
         "[1=ปิด] ,[0=เปิด] สถานะตอนนี้ {value}"
       ]
     },
     {
       "message":"กี่องศา",
-      "sub_topic": "/Temp",
+      "sub_topic": "/f14decf9-b20d-11e6-8d27-847beb0c5a27/Temp",
       "responses": [
         "อุณหภูมิห้องนั่งเล่น {value}"
       ]
